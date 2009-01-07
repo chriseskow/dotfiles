@@ -5,7 +5,7 @@ export LSCOLORS=excxfxdxbxegedabagacgx
 export COPYFILE_DISABLE=true
 
 # Prompt
-function prompt {
+prompt() {
   local NONE="\[\e[0m\]"
   local RED="\[\e[31m\]"
   local GREEN="\[\e[32m\]"
@@ -15,6 +15,11 @@ function prompt {
   export SUDO_PS1=$PROMPT
 }
 prompt
+
+# Functions
+rmdsstore() {
+  find ${1:-.} -name .DS_Store -print -delete
+}
 
 # Aliases
 alias ..="cd .."
@@ -27,6 +32,6 @@ alias gvim="mvim"
 alias stuff="open ~/Documents/stuff.txt"
 
 # Git completion
-if [ -e "$HOME/.git-completion.bash" ]; then
-  source "$HOME/.git-completion.bash"
+if [ -e ~/.git-completion.bash ]; then
+  source ~/.git-completion.bash
 fi
