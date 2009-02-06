@@ -1,6 +1,4 @@
 require "irb/completion"
-require "rubygems"
-require "wirble"
 require "yaml"
 
 IRB.conf[:PROMPT_MODE] = :SIMPLE
@@ -12,5 +10,12 @@ end
 
 alias q exit
 
-Wirble.init
-Wirble.colorize
+# Use Wirble, if we have it.
+begin
+  require "rubygems"
+  require "wirble"
+  Wirble.init
+  Wirble.colorize
+rescue LoadError
+  # Do nothing.
+end
