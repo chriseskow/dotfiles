@@ -48,13 +48,3 @@ inoremap <Down>   <C-O>gj
 nnoremap k        gk
 nnoremap <Up>     gk
 inoremap <Up>     <C-O>gk
-
-" Tab shortcuts
-noremap  <C-T> :tabnew<CR>
-inoremap <C-T> <C-O>:tabnew<CR>
-noremap  <C-W> :tabclose<CR>
-inoremap <C-W> <C-O>:tabclose<CR>
-noremap  <C-N> :tabnext<CR>
-inoremap <C-N> <C-O>:tabnext<CR>
-noremap  <C-P> :tabprev<CR>
-inoremap <C-P> <C-O>:tabprev<CR>
