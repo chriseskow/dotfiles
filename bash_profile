@@ -1,5 +1,6 @@
 # Environment variables
 export PATH=~/Code/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/X11/bin:/usr/local/texlive/2008basic/bin/universal-darwin
+export EDITOR=mate
 export CLICOLOR=1
 export LSCOLORS=excxfxdxbxegedabagacgx
 export COPYFILE_DISABLE=true
