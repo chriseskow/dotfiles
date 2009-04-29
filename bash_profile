@@ -24,6 +24,9 @@ rmdsstore() {
 
 # Aliases
 alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
 alias ls="ls -hF"
 alias la="ls -a"
 alias ll="ls -l"
