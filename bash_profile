@@ -17,11 +17,6 @@ prompt() {
 }
 prompt
 
-# Functions
-rmdsstore() {
-  find ${1:-.} -name .DS_Store -print -delete
-}
-
 # Aliases
 alias ..="cd .."
 alias ...="cd ../.."
@@ -34,6 +29,15 @@ alias lal="ls -al"
 alias grep="grep --color=auto"
 alias gvim="mvim"
 alias stuff="open ~/Documents/stuff.txt"
+
+# Functions
+rgrep() {
+  grep -R "$1" .
+}
+
+rmdsstore() {
+  find ${1:-.} -name .DS_Store -print -delete
+}
 
 # Git completion
 if [ -e ~/.git-completion.bash ]; then
