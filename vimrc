@@ -22,7 +22,7 @@ autocmd FileType help,make Tab 8
 " Syntax highlighting and filetypes
 syntax on
 filetype indent plugin on
-color chris
+color chris-lite
 set background=light
 
 " Visual
