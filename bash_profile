@@ -39,7 +39,5 @@ rmdsstore() {
   find ${1:-.} -name .DS_Store -print -delete
 }
 
-# Git completion
-if [ -e ~/.git-completion.bash ]; then
-  source ~/.git-completion.bash
-fi
+# Bash completion
+source /usr/local/opt/etc/bash_completion
