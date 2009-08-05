@@ -48,3 +48,8 @@ inoremap <Down>   <C-O>gj
 nnoremap k        gk
 nnoremap <Up>     gk
 inoremap <Up>     <C-O>gk
+
+" MacVim specific
+if has("gui_macvim")
+  let macvim_hig_shift_movement = 1
+endif
