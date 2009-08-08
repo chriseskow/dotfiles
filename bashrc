@@ -17,6 +17,9 @@ prompt() {
 }
 prompt
 
+# Title
+export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}\007"'
+
 # Aliases
 alias ..="cd .."
 alias ...="cd ../.."
