@@ -7,6 +7,7 @@ for file in *; do
     if [ -d "$dest" -a ! -L "$dest" ]; then
       echo "Warning: $dest is a non-symlinked directory, skipping $file"
     else
+      rm -f "$dest"
       ln -fsv "$src" "$dest"
     fi
   fi
