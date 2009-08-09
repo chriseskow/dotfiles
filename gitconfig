@@ -7,7 +7,7 @@
 	status = auto
 	interactive = auto
 [core]
-	editor = mate -w
+	editor = vim
 [alias]
 	st = status
 	ci = commit
