@@ -54,5 +54,6 @@ nnoremap ;        A;<Esc>
 
 " MacVim specific
 if has("gui_macvim")
+  set transparency=20
   let macvim_hig_shift_movement = 1
 endif
