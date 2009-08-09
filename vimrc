@@ -24,7 +24,6 @@ autocmd FileType make set noexpandtab
 syntax on
 filetype indent plugin on
 color chris
-set background=light
 
 " Visual
 set shortmess=I
