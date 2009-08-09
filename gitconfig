@@ -8,6 +8,7 @@
 	interactive = auto
 [core]
 	editor = vim
+	excludesfile = ~/.gitignore
 [alias]
 	st = status
 	ci = commit
