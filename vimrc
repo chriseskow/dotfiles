@@ -49,6 +49,9 @@ nnoremap k        gk
 nnoremap <Up>     gk
 inoremap <Up>     <C-O>gk
 
+" Shortcut to append semicolons to lines
+nnoremap ;        A;<Esc>
+
 " MacVim specific
 if has("gui_macvim")
   let macvim_hig_shift_movement = 1
