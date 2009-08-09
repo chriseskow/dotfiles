@@ -18,6 +18,7 @@ command -nargs=1 Tab set shiftwidth=<args> tabstop=<args> softtabstop=<args>
 autocmd FileType * Tab 2
 autocmd FileType c,java,python Tab 4
 autocmd FileType help,make Tab 8
+autocmd FileType make set noexpandtab
 
 " Syntax highlighting and filetypes
 syntax on
