@@ -1,20 +1,47 @@
 # Environment variables
-export PATH=~/Code/bin:/usr/local/opt/bin:/usr/local/opt/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/local/texlive/2008basic/bin/universal-darwin
-export EDITOR=mate
-export LSCOLORS=excxfxdxbxegedabagacgx
-export COPYFILE_DISABLE=true
+export TERM=xterm
+export EDITOR=vim
+export PAGER=less
+
+# PATH
+for DIR in \
+  "/usr/local/sbin" \
+  "/usr/local/bin" \
+  "/usr/local/opt/sbin" \
+  "/usr/local/opt/bin" \
+  "$HOME/bin" \
+  "$HOME/Code/bin"
+do
+  if [ -d "$DIR" ]; then
+    if ! echo $PATH | grep -q "$DIR"; then
+      export PATH="$DIR:$PATH"
+    fi
+  fi
+done
+
+# MANPATH
+for DIR in \
+  "/usr/local/share/man" \
+  "/usr/local/opt/share/man" \
+  "$HOME/share/man"
+do
+  if [ -d "$DIR" ]; then
+    if ! echo $MANPATH | grep -q "$DIR"; then
+      export MANPATH="$DIR:$MANPATH"
+    fi
+  fi
+done
+
+unset DIR
 
 # Prompt
-prompt() {
-  local NONE="\[\e[0m\]"
-  local RED="\[\e[31m\]"
-  local GREEN="\[\e[32m\]"
-  local BLUE="\[\e[34m\]"
-  local PROMPT="[$GREEN\u$NONE@$RED\h$NONE:$BLUE\w$NONE]\\$ "
-  export PS1=$PROMPT
-  export SUDO_PS1=$PROMPT
-}
-prompt
+NONE="\[\033[0m\]"
+RED="\[\033[31m\]"
+GREEN="\[\033[32m\]"
+BLUE="\[\033[34m\]"
+export PS1="[$GREEN\u$NONE@$RED\h$NONE:$BLUE\w$NONE]\\$ "
+export SUDO_PS1="$PS1"
+unset NONE RED GREEN BLUE
 
 # Title
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}\007"'
@@ -24,22 +51,66 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias ls="ls -hFG"
 alias la="ls -a"
 alias ll="ls -l"
 alias lal="ls -al"
-alias grep="grep --color=auto"
-alias gvim="mvim"
-alias stuff="open ~/Documents/stuff.txt"
+
+# Quick login aliases for work machines
+if hostname | grep -q .rutgers.edu; then
+  alias farside="ssh farside"
+  alias aramis="ssh aramis"
+  alias porthos="ssh porthos"
+  alias research="ssh research"
+  alias spock="ssh spock"
+  alias trix="ssh trix"
+  alias remus="ssh remus"
+  alias paul="ssh -t farside 'ssh paul'"
+  alias math="ssh -t farside 'ssh math'"
+  alias euler="ssh -t farside 'rlogin euler'"
+  alias alpha="ssh -t farside 'ssh www8.srv.lcsr'"
+fi
 
 # Functions
 rgrep() {
   grep -R "$1" .
 }
 
-rmdsstore() {
-  find ${1:-.} -name .DS_Store -print -delete
-}
+# OS-specific configuration
+case `uname` in
+  Darwin)
+    export COPYFILE_DISABLE=true
+    export LSCOLORS=excxfxdxbxafadababaggx
+    alias ls="ls -hFG"
+    rmdsstore() {
+      find ${1:-.} -name .DS_Store -print -delete
+    }
+    ;;
+  Linux)
+    export LS_COLORS="di=34:ln=32:so=35:pi=33:ex=31:bd=90;45:cd=90;43:su=90;41:sg=90;41:tw=90;46:ow=36:mi=90;42"
+    alias ls="ls -hF --color=auto"
+    alias grep="grep --color=auto"
+    alias ff="firefox &"
+    ;;
+  SunOS)
+    unset MANPATH
+    alias ls="ls -F"
+    ;;
+  *)
+    alias ls="ls -F"
+esac
+
+# Host-specific configuration
+case `hostname` in
+  iroc.rutgers.edu|hacker.rutgers.edu|demigod.rutgers.edu)
+    alias eos="gedit '$HOME/etc/eos.txt' &"
+    ;;
+  www8.srv.lcsr.rutgers.edu)
+    export CVSROOT=/www/webroot
+esac
 
 # Bash completion
-source /usr/local/opt/etc/bash_completion
+if [ -f /etc/bash_completion ]; then
+  source /etc/bash_completion
+elif [ -f /usr/local/opt/etc/bash_completion ]; then
+  source /usr/local/opt/etc/bash_completion
+fi
