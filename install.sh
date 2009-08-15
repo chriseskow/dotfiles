@@ -1,14 +1,16 @@
 #!/bin/sh
 
-for file in *; do
-  if [ "$file" != "`basename $0`" ]; then
-    src="$PWD/$file"
-    dest="$HOME/.$file"
-    if [ -d "$dest" -a ! -L "$dest" ]; then
-      echo "Warning: $dest is a non-symlinked directory, skipping $file"
-    else
-      rm -f "$dest"
-      ln -fsv "$src" "$dest"
-    fi
-  fi
-done
+if [ "$1" = -h -o $# -gt 1 ]; then
+  echo "Usage: $0 [hostname]"
+  exit
+fi
+
+SRC="`dirname $0`/"
+
+if [ -n "$1" ]; then
+  DEST="$1:~"
+else
+  DEST="$HOME"
+fi
+
+rsync -av --exclude=install.sh --exclude=.git --exclude=.gitignore "$SRC" "$DEST"
