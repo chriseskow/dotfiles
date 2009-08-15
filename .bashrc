@@ -82,6 +82,7 @@ case `uname` in
     export COPYFILE_DISABLE=true
     export LSCOLORS=excxfxdxbxafadababaggx
     alias ls="ls -hFG"
+    alias grep="grep --color=auto"
     rmdsstore() {
       find ${1:-.} -name .DS_Store -print -delete
     }
