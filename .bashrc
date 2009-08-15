@@ -67,6 +67,7 @@ if hostname | grep -q .rutgers.edu; then
   alias paul="ssh -t farside 'ssh paul'"
   alias math="ssh -t farside 'ssh math'"
   alias euler="ssh -t farside 'rlogin euler'"
+  alias igor="ssh -t farside 'rlogin igor'"
   alias alpha="ssh -t farside 'ssh www8.srv.lcsr'"
 fi
 
