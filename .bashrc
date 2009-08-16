@@ -13,7 +13,7 @@ for DIR in \
   "$HOME/Code/bin"
 do
   if [ -d "$DIR" ]; then
-    if ! echo $PATH | grep -q "$DIR"; then
+    if [ -z "`echo $PATH | grep $DIR`" ]; then
       export PATH="$DIR:$PATH"
     fi
   fi
@@ -26,7 +26,7 @@ for DIR in \
   "$HOME/share/man"
 do
   if [ -d "$DIR" ]; then
-    if ! echo $MANPATH | grep -q "$DIR"; then
+    if [ -z "`echo $PATH | grep $DIR`" ]; then
       export MANPATH="$DIR:$MANPATH"
     fi
   fi
@@ -56,7 +56,7 @@ alias ll="ls -l"
 alias lal="ls -al"
 
 # Quick login aliases for work machines
-if hostname | grep -q .rutgers.edu; then
+if [ -n "`hostname | grep .rutgers.edu`" ]; then
   alias farside="ssh farside"
   alias aramis="ssh aramis"
   alias porthos="ssh porthos"
