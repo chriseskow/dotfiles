@@ -1,5 +1,4 @@
 # Environment variables
-export TERM=xterm
 export EDITOR=vim
 export PAGER=less
 
