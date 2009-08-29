@@ -7,8 +7,8 @@ export PAGER=less
 for DIR in \
   "/usr/local/sbin" \
   "/usr/local/bin" \
-  "/usr/local/opt/sbin" \
-  "/usr/local/opt/bin" \
+  "/opt/local/sbin" \
+  "/opt/local/bin" \
   "$HOME/bin" \
   "$HOME/Code/bin"
 do
@@ -22,7 +22,7 @@ done
 # MANPATH
 for DIR in \
   "/usr/local/share/man" \
-  "/usr/local/opt/share/man" \
+  "/opt/local/share/man" \
   "$HOME/share/man"
 do
   if [ -d "$DIR" ]; then
@@ -113,6 +113,6 @@ esac
 # Bash completion
 if [ -f /etc/bash_completion ]; then
   source /etc/bash_completion
-elif [ -f /usr/local/opt/etc/bash_completion ]; then
-  source /usr/local/opt/etc/bash_completion
+elif [ -f /opt/local/etc/bash_completion ]; then
+  source /opt/local/etc/bash_completion
 fi
