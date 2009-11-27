@@ -8,6 +8,7 @@ for DIR in \
   "/usr/local/bin" \
   "/opt/local/sbin" \
   "/opt/local/bin" \
+  "/opt/local/lib/mysql5/bin" \
   "$HOME/bin" \
   "$HOME/Code/bin"
 do
