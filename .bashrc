@@ -6,9 +6,6 @@ export PAGER=less
 for DIR in \
   "/usr/local/sbin" \
   "/usr/local/bin" \
-  "/opt/local/sbin" \
-  "/opt/local/bin" \
-  "/opt/local/lib/mysql5/bin" \
   "$HOME/bin" \
   "$HOME/Code/bin"
 do
@@ -22,7 +19,6 @@ done
 # MANPATH
 for DIR in \
   "/usr/local/share/man" \
-  "/opt/local/share/man" \
   "$HOME/share/man"
 do
   if [ -d "$DIR" ]; then
@@ -113,6 +109,6 @@ esac
 # Bash completion
 if [ -f /etc/bash_completion ]; then
   source /etc/bash_completion
-elif [ -f /opt/local/etc/bash_completion ]; then
-  source /opt/local/etc/bash_completion
+elif [ -f /usr/local/etc/bash_completion ]; then
+  source /usr/local/etc/bash_completion
 fi
