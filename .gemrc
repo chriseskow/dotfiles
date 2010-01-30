@@ -5,6 +5,5 @@ gem: --no-rdoc --no-ri --no-user-install
 :verbose: true
 :sources:
 - http://gems.rubyforge.org
-- http://gems.github.com
 :backtrace: false
 :benchmark: false
