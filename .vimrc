@@ -32,7 +32,6 @@ set title
 set ruler
 set laststatus=2
 set statusline=%<%f\ %h%m%r%=(%l,%c%V)\ %P\ %y
-set showcmd
 set wildmenu
 set list listchars=eol:¬,tab:›·
 
