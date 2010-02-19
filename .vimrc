@@ -53,5 +53,5 @@ nnoremap ;        A;<Esc>
 
 " MacVim specific
 if has("gui_macvim")
-  set transparency=5
+  set transparency=10
 endif
