@@ -1,4 +1,5 @@
 # Environment variables
+export HISTSIZE=1000000
 export EDITOR=vim
 export PAGER=less
 
