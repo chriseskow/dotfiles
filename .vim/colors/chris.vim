@@ -58,7 +58,7 @@ hi Type             guifg=#99cc66     guibg=NONE        gui=NONE      ctermfg=gr
 hi Special          guifg=#ffffff     guibg=NONE        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
 hi Delimiter        guifg=#66cccc     guibg=NONE        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
 hi Operator         guifg=#666666     guibg=NONE        gui=NONE      ctermfg=black       ctermbg=NONE        cterm=NONE
-hi SpecialChar                                                        ctermfg=yellow      ctermbg=NONE        cterm=NONE
+hi SpecialChar      guifg=#cccc66     guibg=NONE        gui=NONE      ctermfg=yellow      ctermbg=NONE        cterm=NONE
 
 hi link Character       String
 hi link Boolean         Constant
