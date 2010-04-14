@@ -4,6 +4,8 @@ set mouse=a
 set backup
 set backupdir=~/.vim/backup
 set directory=~/.vim/swap
+set splitbelow
+set splitright
 
 " Control
 set backspace=indent,eol,start
