@@ -92,3 +92,12 @@ if [ -f /etc/bash_completion ]; then
 elif [ -f /usr/local/etc/bash_completion ]; then
   source /usr/local/etc/bash_completion
 fi
+
+# Run any additional shell scripts
+for FILE in $HOME/.bash.d/*.sh; do
+  if [ -f "$FILE" ]; then
+    source "$FILE"
+  fi
+done
+
+unset FILE
