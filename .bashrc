@@ -56,22 +56,6 @@ alias lal="ls -al"
 alias df="df -h"
 alias du="du -h"
 
-# Quick login aliases for work machines
-if [ -n "`hostname | grep .rutgers.edu`" ]; then
-  alias farside="ssh farside"
-  alias aramis="ssh aramis"
-  alias porthos="ssh porthos"
-  alias research="ssh research"
-  alias spock="ssh spock"
-  alias trix="ssh trix"
-  alias remus="ssh remus"
-  alias paul="ssh -t farside 'ssh paul'"
-  alias math="ssh -t farside 'ssh math'"
-  alias euler="ssh -t farside 'rlogin euler'"
-  alias igor="ssh -t farside 'rlogin igor'"
-  alias alpha="ssh -t farside 'ssh www8.srv.lcsr'"
-fi
-
 # Functions
 rgrep() {
   grep -R "$1" .
@@ -100,15 +84,6 @@ case `uname` in
     ;;
   *)
     alias ls="ls -F"
-esac
-
-# Host-specific configuration
-case `hostname` in
-  iroc.rutgers.edu|hacker.rutgers.edu|demigod.rutgers.edu)
-    alias eos="gedit '$HOME/etc/eos.txt' &"
-    ;;
-  www8.srv.lcsr.rutgers.edu)
-    export CVSROOT=/www/webroot
 esac
 
 # Bash completion
