@@ -14,7 +14,7 @@ let colors_name = "chris"
 " General colors
 hi Normal           guifg=#ffffff     guibg=#000000     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi NonText          guifg=#666666     guibg=NONE        gui=NONE      ctermfg=black       ctermbg=NONE        cterm=NONE
-hi Cursor           guifg=NONE        guibg=#666666     gui=NONE      ctermfg=NONE        ctermbg=black       cterm=NONE
+hi Cursor           guifg=NONE        guibg=#cc6633     gui=NONE      ctermfg=NONE        ctermbg=black       cterm=NONE
 hi LineNr           guifg=#666666     guibg=NONE        gui=NONE      ctermfg=black       ctermbg=NONE        cterm=NONE
 hi VertSplit        guifg=#666666     guibg=#666666     gui=NONE      ctermfg=black       ctermbg=black       cterm=NONE
 hi StatusLine       guifg=#666666     guibg=#ffffff     gui=NONE      ctermfg=black       ctermbg=white       cterm=NONE
