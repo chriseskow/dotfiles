@@ -20,43 +20,43 @@ hi VertSplit        guifg=#666666     guibg=#666666     gui=NONE      ctermfg=bl
 hi StatusLine       guifg=#666666     guibg=#ffffff     gui=NONE      ctermfg=black       ctermbg=white       cterm=NONE
 hi StatusLineNC     guifg=#ffffff     guibg=#666666     gui=NONE      ctermfg=white       ctermbg=black       cterm=NONE
 hi Folded           guifg=NONE        guibg=NONE        gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
-hi Title            guifg=NONE        guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=NONE
+hi Title            guifg=NONE        guibg=NONE        gui=BOLD      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi Visual           guifg=NONE        guibg=#666666     gui=NONE      ctermfg=NONE        ctermbg=black       cterm=NONE
 hi SpecialKey       guifg=#666666     guibg=NONE        gui=NONE      ctermfg=black       ctermbg=NONE        cterm=NONE
 hi WildMenu         guifg=#666666     guibg=#cccc66     gui=NONE      ctermfg=black       ctermbg=yellow      cterm=NONE
 hi PmenuSbar        guifg=#666666     guibg=#ffffff     gui=NONE      ctermfg=black       ctermbg=white       cterm=NONE
-hi Error            guifg=#ffffff     guibg=#cc6666     gui=undercurl ctermfg=white       ctermbg=red         cterm=NONE          guisp=#cc6666
-hi ErrorMsg         guifg=#ffffff     guibg=#cc6666     gui=bold      ctermfg=white       ctermbg=red         cterm=NONE
-hi WarningMsg       guifg=#ffffff     guibg=#cc6666     gui=bold      ctermfg=white       ctermbg=red         cterm=NONE
-hi ModeMsg          guifg=NONE        guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=NONE
+hi Error            guifg=#ffffff     guibg=#cc6666     gui=UNDERCURL ctermfg=white       ctermbg=red         cterm=NONE          guisp=#cc6666
+hi ErrorMsg         guifg=#ffffff     guibg=#cc6666     gui=BOLD      ctermfg=white       ctermbg=red         cterm=NONE
+hi WarningMsg       guifg=#ffffff     guibg=#cc6666     gui=BOLD      ctermfg=white       ctermbg=red         cterm=NONE
+hi ModeMsg          guifg=NONE        guibg=NONE        gui=BOLD      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 
 " Vim 7.x specific colors
 if version >= 700
-  hi CursorLine     guifg=NONE        guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=bold
-  hi CursorColumn   guifg=NONE        guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=bold
+  hi CursorLine     guifg=NONE        guibg=NONE        gui=BOLD      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
+  hi CursorColumn   guifg=NONE        guibg=NONE        gui=BOLD      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
   hi MatchParen     guifg=#ffffff     guibg=#666666     gui=NONE      ctermfg=white       ctermbg=black       cterm=NONE
   hi Pmenu          guifg=NONE        guibg=NONE        gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
   hi PmenuSel       guifg=NONE        guibg=NONE        gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
-  hi Search         guifg=NONE        guibg=NONE        gui=underline ctermfg=NONE        ctermbg=NONE        cterm=underline
-  hi IncSearch      guifg=#666666     guibg=#cccc66     gui=underline ctermfg=black       ctermbg=yellow      cterm=NONE
+  hi Search         guifg=NONE        guibg=NONE        gui=UNDERLINE ctermfg=NONE        ctermbg=NONE        cterm=UNDERLINE
+  hi IncSearch      guifg=#666666     guibg=#cccc66     gui=UNDERLINE ctermfg=black       ctermbg=yellow      cterm=NONE
   hi TabLine                                                          ctermfg=NONE        ctermbg=black       cterm=NONE
   hi TabLineFill                                                      ctermfg=NONE        ctermbg=black       cterm=NONE
-  hi TabLineSel                                                       ctermfg=NONE        ctermbg=NONE        cterm=bold
+  hi TabLineSel                                                       ctermfg=NONE        ctermbg=NONE        cterm=BOLD
 endif
 
 " Code syntax
 hi Comment          guifg=#666666     guibg=NONE        gui=NONE      ctermfg=black       ctermbg=NONE        cterm=NONE
 hi Todo             guifg=#cc6666     guibg=NONE        gui=NONE      ctermfg=red         ctermbg=NONE        cterm=NONE
-hi Identifier       guifg=#66cccc     guibg=NONE        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
+hi Identifier       guifg=#99cc66     guibg=NONE        gui=NONE      ctermfg=green       ctermbg=NONE        cterm=NONE
 hi Function         guifg=#cccc66     guibg=NONE        gui=NONE      ctermfg=yellow      ctermbg=NONE        cterm=NONE
-hi Constant         guifg=#66cccc     guibg=NONE        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
+hi Constant         guifg=#99cc66     guibg=NONE        gui=NONE      ctermfg=green       ctermbg=NONE        cterm=NONE
 hi String           guifg=#cc6666     guibg=NONE        gui=NONE      ctermfg=red         ctermbg=NONE        cterm=NONE
 hi Number           guifg=#cc66cc     guibg=NONE        gui=NONE      ctermfg=magenta     ctermbg=NONE        cterm=NONE
 hi Statement        guifg=#6699cc     guibg=NONE        gui=NONE      ctermfg=blue        ctermbg=NONE        cterm=NONE
 hi PreProc          guifg=#6699cc     guibg=NONE        gui=NONE      ctermfg=blue        ctermbg=NONE        cterm=NONE
-hi Type             guifg=#99cc66     guibg=NONE        gui=NONE      ctermfg=green       ctermbg=NONE        cterm=NONE
+hi Type             guifg=#66cccc     guibg=NONE        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
 hi Special          guifg=#ffffff     guibg=NONE        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
-hi Delimiter        guifg=#66cccc     guibg=NONE        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
+hi Delimiter        guifg=#666666     guibg=NONE        gui=NONE      ctermfg=black       ctermbg=NONE        cterm=NONE
 hi Operator         guifg=#666666     guibg=NONE        gui=NONE      ctermfg=black       ctermbg=NONE        cterm=NONE
 hi SpecialChar      guifg=#cccc66     guibg=NONE        gui=NONE      ctermfg=yellow      ctermbg=NONE        cterm=NONE
 
@@ -89,8 +89,8 @@ hi rubyRegexpDelimiter        guifg=#cc6666      guibg=NONE      gui=NONE      c
 hi rubyEscape                 guifg=#66cccc      guibg=NONE      gui=NONE      ctermfg=cyan           ctermbg=NONE      cterm=NONE
 hi rubyInterpolationDelimiter guifg=#6699cc      guibg=NONE      gui=NONE      ctermfg=blue           ctermbg=NONE      cterm=NONE
 hi rubyControl                guifg=#6699cc      guibg=NONE      gui=NONE      ctermfg=blue           ctermbg=NONE      cterm=NONE
-hi rubyGlobalVariable         guifg=#6699cc      guibg=NONE      gui=NONE      ctermfg=lightblue      ctermbg=NONE      cterm=NONE
-hi rubyStringDelimiter        guifg=#99cc66      guibg=NONE      gui=NONE      ctermfg=lightgreen     ctermbg=NONE      cterm=NONE
+hi rubyGlobalVariable         guifg=#6699cc      guibg=NONE      gui=NONE      ctermfg=blue           ctermbg=NONE      cterm=NONE
+hi rubyStringDelimiter        guifg=#99cc66      guibg=NONE      gui=NONE      ctermfg=green          ctermbg=NONE      cterm=NONE
 hi link rubyClass             Keyword
 hi link rubyModule            Keyword
 hi link rubyKeyword           Keyword
