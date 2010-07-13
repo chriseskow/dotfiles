@@ -1,4 +1,4 @@
-if which fortune > /dev/null; then
+if which fortune &> /dev/null; then
   fortune
 fi
 
