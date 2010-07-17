@@ -43,6 +43,10 @@ unset NONE RED GREEN BLUE
 # Title
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}\007"'
 
+# Share history across sessions
+shopt -s histappend
+export PROMPT_COMMAND="$PROMPT_COMMAND; history -a"
+
 # Aliases
 alias ..="cd .."
 alias ...="cd ../.."
