@@ -50,6 +50,14 @@ nnoremap k        gk
 nnoremap <Up>     gk
 inoremap <Up>     <C-O>gk
 
+" Numpad operator keys resize split windows
+if bufwinnr(1)
+  map <kPlus> <C-W>+
+  map <kMinus> <C-W>-
+  map <kMultiply> <C-W>>
+  map <kDivide> <C-W><
+endif
+
 " Shortcut to append semicolons to lines
 nnoremap ;        A;<Esc>
 
