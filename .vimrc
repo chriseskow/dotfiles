@@ -28,7 +28,7 @@ filetype indent plugin on
 color chris
 
 " Visual
-set shortmess=I
+set shortmess=It
 set number
 set title
 set ruler
