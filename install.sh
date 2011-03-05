@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ "$1" = -h -o $# -gt 1 ]; then
+if [ "x$1" = "x-h" -o "x$1" = "x--help" -o $# -gt 1 ]; then
   echo "Usage: $0 [hostname]"
   exit
 fi
