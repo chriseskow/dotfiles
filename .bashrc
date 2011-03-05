@@ -61,6 +61,10 @@ alias lal="ls -al"
 alias df="df -h"
 alias du="du -h"
 
+if which colordiff &>/dev/null; then
+  alias diff="colordiff"
+fi
+
 # Functions
 rgrep() {
   grep -R "$1" .
