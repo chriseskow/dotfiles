@@ -68,11 +68,6 @@ if which colordiff &>/dev/null; then
   alias diff="colordiff"
 fi
 
-# Functions
-rgrep() {
-  grep -R "$1" .
-}
-
 # OS-specific configuration
 case `uname` in
   Darwin)
