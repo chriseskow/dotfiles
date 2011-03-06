@@ -16,6 +16,8 @@ set scrolloff=2
 set autoindent
 set smartindent
 command -nargs=1 Tab set shiftwidth=<args> tabstop=<args> softtabstop=<args>
+command Copy set nonumber nolist mouse=
+command Nocopy set number list mouse=a
 autocmd FileType * Tab 8
 autocmd FileType c,java,python,php Tab 4
 autocmd FileType ruby Tab 2
