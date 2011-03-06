@@ -33,10 +33,10 @@ done
 unset DIR
 
 # Prompt
-NONE=$(tput sgr0)
-RED=$(tput setaf 1)
-GREEN=$(tput setaf 2)
-BLUE=$(tput setaf 4)
+NONE="\[$(tput sgr0)\]"
+RED="\[$(tput setaf 1)\]"
+GREEN="\[$(tput setaf 2)\]"
+BLUE="\[$(tput setaf 4)\]"
 export PS1="$NONE[$GREEN\u$NONE@$RED\h$NONE:$BLUE\w$NONE]\\$ "
 export SUDO_PS1="$PS1"
 unset NONE RED GREEN BLUE
