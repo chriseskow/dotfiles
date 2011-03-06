@@ -1,3 +1,7 @@
+set expand-tilde off
+set match-hidden-files off
+
+# Key bindings
 "\C-b": backward-word
 "\C-f": forward-word
 "\eOA": history-search-backward
