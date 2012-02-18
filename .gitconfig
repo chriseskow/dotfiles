@@ -16,3 +16,5 @@
 	co = checkout
 	br = branch
 	df = diff
+	head = log -n 1
+	tree = log --all --pretty=oneline --abbrev-commit --graph --decorate
