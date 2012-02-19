@@ -6,17 +6,19 @@ export LESS=-R
 
 # PATH
 for DIR in \
+  "/usr/X11/bin" \
   "/usr/local/sbin" \
   "/usr/local/bin" \
   "$HOME/bin" \
   "$HOME/Code/bin"
 do
   if [ -d "$DIR" ]; then
-    if [ -z "`echo $PATH | grep $DIR`" ]; then
-      export PATH="$DIR:$PATH"
-    fi
+    PATH="$DIR:$PATH"
   fi
 done
+PATH="$(echo "$PATH" | awk -v RS=: -v ORS=: '!($0 in a) {a[$0]; print}')"
+PATH="${PATH%:}"
+export PATH
 
 # MANPATH
 for DIR in \
@@ -25,10 +27,12 @@ for DIR in \
 do
   if [ -d "$DIR" ]; then
     if [ -z "`echo $PATH | grep $DIR`" ]; then
-      export MANPATH="$DIR:$MANPATH"
+      MANPATH="$DIR:$MANPATH"
     fi
   fi
 done
+MANPATH="${MANPATH%:}"
+export MANPATH
 
 unset DIR
 
