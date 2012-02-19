@@ -37,8 +37,8 @@ if version >= 700
   hi MatchParen     guifg=#ffffff     guibg=#666666     gui=NONE      ctermfg=white       ctermbg=black       cterm=NONE
   hi Pmenu          guifg=NONE        guibg=NONE        gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
   hi PmenuSel       guifg=NONE        guibg=NONE        gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
-  hi Search         guifg=NONE        guibg=NONE        gui=UNDERLINE ctermfg=NONE        ctermbg=NONE        cterm=UNDERLINE
-  hi IncSearch      guifg=#666666     guibg=#cccc66     gui=UNDERLINE ctermfg=black       ctermbg=yellow      cterm=NONE
+  hi Search         guifg=#666666     guibg=#cccc66     gui=NONE      ctermfg=black       ctermbg=yellow      cterm=NONE
+  hi IncSearch      guifg=#666666     guibg=#cccc66     gui=NONE      ctermfg=black       ctermbg=yellow      cterm=NONE
   hi TabLine                                                          ctermfg=NONE        ctermbg=black       cterm=NONE
   hi TabLineFill                                                      ctermfg=NONE        ctermbg=black       cterm=NONE
   hi TabLineSel                                                       ctermfg=NONE        ctermbg=NONE        cterm=BOLD
@@ -78,7 +78,7 @@ hi link SpecialChar     Special
 hi link SpecialComment  Special
 hi link Debug           Special
 
-" Special for Diff
+" Diff
 hi DiffAdd                    guifg=#99cc66      guibg=NONE      gui=NONE      ctermfg=green          ctermbg=NONE      cterm=NONE
 hi diffAdded                  guifg=#99cc66      guibg=NONE      gui=NONE      ctermfg=green          ctermbg=NONE      cterm=NONE
 hi DiffDelete                 guifg=#cc6666      guibg=NONE      gui=NONE      ctermfg=red            ctermbg=NONE      cterm=NONE
@@ -86,7 +86,7 @@ hi diffRemoved                guifg=#cc6666      guibg=NONE      gui=NONE      c
 hi DiffChange                 guifg=#cccc66      guibg=NONE      gui=NONE      ctermfg=yellow         ctermbg=NONE      cterm=NONE
 hi DiffText                   guifg=#666666      guibg=#cccc66   gui=NONE      ctermfg=black          ctermbg=yellow    cterm=NONE
 
-" Special for Ruby
+" Ruby
 hi rubyRegexp                 guifg=#cc6666      guibg=NONE      gui=NONE      ctermfg=brown          ctermbg=NONE      cterm=NONE
 hi rubyRegexpDelimiter        guifg=#cc6666      guibg=NONE      gui=NONE      ctermfg=brown          ctermbg=NONE      cterm=NONE
 hi rubyEscape                 guifg=#66cccc      guibg=NONE      gui=NONE      ctermfg=cyan           ctermbg=NONE      cterm=NONE
@@ -104,7 +104,7 @@ hi link rubyGlobalVariable    Identifier
 hi link rubyClassVariable     Identifier
 hi link rubyConstant          Type
 
-" Special for Java
+" Java
 hi javaDocSeeTag              guifg=#666666     guibg=NONE        gui=NONE      ctermfg=black       ctermbg=NONE        cterm=NONE
 hi javaDocSeeTag              guifg=#666666     guibg=NONE        gui=NONE      ctermfg=black       ctermbg=NONE        cterm=NONE
 hi link javaClassDecl         Type
@@ -114,18 +114,18 @@ hi link javaDocTags           javaDocSeeTag
 hi link javaDocParam          javaDocSeeTag
 hi link javaDocSeeTagParam    javaDocSeeTag
 
-" Special for XML
+" XML
 hi link xmlTag                Keyword
 hi link xmlTagName            Conditional
 hi link xmlEndTag             Identifier
 
-" Special for HTML
+" HTML
 hi link htmlTag               Keyword
 hi link htmlTagName           Conditional
 hi link htmlEndTag            Identifier
 
-" Special for JavaScript
+" JavaScript
 hi link javaScriptNumber      Number
 
-" Special for C#
+" C#
 hi  link csXmlTag             Keyword
