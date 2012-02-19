@@ -80,8 +80,11 @@ hi link Debug           Special
 
 " Special for Diff
 hi DiffAdd                    guifg=#99cc66      guibg=NONE      gui=NONE      ctermfg=green          ctermbg=NONE      cterm=NONE
+hi diffAdded                  guifg=#99cc66      guibg=NONE      gui=NONE      ctermfg=green          ctermbg=NONE      cterm=NONE
 hi DiffDelete                 guifg=#cc6666      guibg=NONE      gui=NONE      ctermfg=red            ctermbg=NONE      cterm=NONE
+hi diffRemoved                guifg=#cc6666      guibg=NONE      gui=NONE      ctermfg=red            ctermbg=NONE      cterm=NONE
 hi DiffChange                 guifg=#cccc66      guibg=NONE      gui=NONE      ctermfg=yellow         ctermbg=NONE      cterm=NONE
+hi DiffText                   guifg=#666666      guibg=#cccc66   gui=NONE      ctermfg=black          ctermbg=yellow    cterm=NONE
 
 " Special for Ruby
 hi rubyRegexp                 guifg=#cc6666      guibg=NONE      gui=NONE      ctermfg=brown          ctermbg=NONE      cterm=NONE
