@@ -66,8 +66,3 @@ endif
 
 " Shortcut to append semicolons to lines
 nnoremap ;        A;<Esc>
-
-" MacVim specific
-if has("gui_macvim")
-  set transparency=10
-endif
