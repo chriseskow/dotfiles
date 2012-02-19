@@ -20,9 +20,9 @@ command Copy set nonumber nolist mouse=
 command Nocopy set number list mouse=a
 autocmd FileType * Tab 8
 autocmd FileType c,java,python,php,html,xml,css,scss,sass,javascript,coffee Tab 4
-autocmd FileType ruby Tab 2
+autocmd FileType ruby,sh Tab 2
 autocmd FileType * set noexpandtab
-autocmd FileType c,java,ruby,python set expandtab
+autocmd FileType c,java,ruby,python,sh set expandtab
 
 " Syntax highlighting and filetypes
 syntax on
