@@ -7,6 +7,7 @@ set backupdir=~/.vim/backup
 set directory=~/.vim/swap
 set splitbelow
 set splitright
+set clipboard=unnamed
 
 " Control
 set backspace=indent,eol,start
