@@ -8,6 +8,7 @@ set directory=~/.vim/swap
 set splitbelow
 set splitright
 set clipboard=unnamed
+call pathogen#infect()
 
 " Control
 set backspace=indent,eol,start
