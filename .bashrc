@@ -82,6 +82,9 @@ unset NONE RED GREEN BLUE
 # Title
 export PROMPT_COMMAND='git_prompt_init;echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}\007"'
 
+# Check the window size after each command
+shopt -s checkwinsize
+
 # Share history across sessions
 shopt -s histappend
 export PROMPT_COMMAND="$PROMPT_COMMAND; history -a"
