@@ -1,5 +1,6 @@
 " General
 set nocompatible
+set fileformat=unix
 set mouse=a
 set backup
 set backupdir=~/.vim/backup
