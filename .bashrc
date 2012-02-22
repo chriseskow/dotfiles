@@ -19,21 +19,6 @@ done
 PATH="$(echo "$PATH" | awk -v RS=: -v ORS=: '!($0 in a) {a[$0]; print}')"
 PATH="${PATH%:}"
 export PATH
-
-# MANPATH
-for DIR in \
-  "/usr/local/share/man" \
-  "$HOME/share/man"
-do
-  if [ -d "$DIR" ]; then
-    if [ -z "`echo $PATH | grep $DIR`" ]; then
-      MANPATH="$DIR:$MANPATH"
-    fi
-  fi
-done
-MANPATH="${MANPATH%:}"
-export MANPATH
-
 unset DIR
 
 # Prompt
@@ -127,7 +112,6 @@ case `uname` in
     alias ff="firefox &"
     ;;
   SunOS)
-    unset MANPATH
     alias ls="ls -F"
     ;;
   *)
