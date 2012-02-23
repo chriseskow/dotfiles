@@ -25,47 +25,17 @@ unset DIR
 NONE="\[\033[0m\]"
 RED="\[\033[31m\]"
 GREEN="\[\033[32m\]"
+YELLOW="\[\033[33m\]"
 BLUE="\[\033[34m\]"
-
-function git_prompt_init
-{
-  if [ -n "$(which git)" ]; then
-    export GIT_PROMPT_BRANCH="$(git branch --no-color 2>/dev/null | grep '^* ' | sed 's/* //')"
-  fi
-}
-
-function git_prompt_prefix
-{
-  test -n "$GIT_PROMPT_BRANCH" && echo " ("
-}
-
-function git_prompt_color
-{
-  if [ -n "$GIT_PROMPT_BRANCH" ]; then
-    if git status 2>/dev/null | grep -q "nothing to commit (working directory clean)"; then
-      echo -e "\033[32m"
-    else
-      echo -e "\033[31m"
-    fi
-  fi
-}
-
-function git_prompt_branch
-{
-  echo $GIT_PROMPT_BRANCH
-}
-
-function git_prompt_postfix
-{
-  test -n "$GIT_PROMPT_BRANCH" && echo ")"
-}
-
-export PS1="$NONE[$GREEN\u$NONE@$RED\h$NONE:$BLUE\w$NONE]\$(git_prompt_prefix)\[\$(git_prompt_color)\]\$(git_prompt_branch)$NONE\$(git_prompt_postfix)\\$ "
+type -t __git_ps1 | grep -q function || function __git_ps1 { false; }
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+export PS1="$NONE[$GREEN\u$NONE@$RED\h$NONE:$BLUE\w$NONE\$(__git_ps1 ' ($YELLOW%s$NONE)')]\\$ "
 export SUDO_PS1="$PS1"
-unset NONE RED GREEN BLUE
+unset NONE RED GREEN YELLOW BLUE
 
 # Title
-export PROMPT_COMMAND='git_prompt_init;echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}\007"'
+export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}\007"'
 
 # Check the window size after each command
 shopt -s checkwinsize
