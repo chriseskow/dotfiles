@@ -13,4 +13,4 @@ else
   DEST="$HOME"
 fi
 
-rsync -av --exclude=install.sh --exclude=.git "$SRC" "$DEST"
+rsync -av --exclude=install.sh --exclude=.git --exclude=.gitmodules "$SRC" "$DEST"
