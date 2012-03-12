@@ -1,24 +1,24 @@
 [submodule ".vim/bundle/snipmate"]
 	path = .vim/bundle/snipmate
-	url = git://github.com/msanders/snipmate.vim.git
+	url = https://github.com/msanders/snipmate.vim
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
-	url = git://github.com/scrooloose/nerdtree.git
+	url = https://github.com/scrooloose/nerdtree
 [submodule ".vim/bundle/solarized"]
 	path = .vim/bundle/solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
+	url = https://github.com/altercation/vim-colors-solarized
 [submodule ".vim/bundle/html5"]
 	path = .vim/bundle/html5
-	url = git://github.com/othree/html5.vim.git
+	url = https://github.com/othree/html5.vim
 [submodule ".vim/bundle/coffee-script"]
 	path = .vim/bundle/coffee-script
-	url = git://github.com/kchmck/vim-coffee-script.git
+	url = https://github.com/kchmck/vim-coffee-script
 [submodule ".vim/bundle/std_c"]
 	path = .vim/bundle/std_c
-	url = git://github.com/vim-scripts/std_c.zip.git
+	url = https://github.com/vim-scripts/std_c.zip
 [submodule ".vim/bundle/nginx"]
 	path = .vim/bundle/nginx
-	url = git://github.com/vim-scripts/nginx.vim.git
+	url = https://github.com/vim-scripts/nginx.vim
 [submodule ".vim/bundle/javascript"]
 	path = .vim/bundle/javascript
-	url = git://github.com/pangloss/vim-javascript.git
+	url = https://github.com/pangloss/vim-javascript
