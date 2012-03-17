@@ -27,6 +27,9 @@ autocmd FileType ruby,sh Tab 2
 autocmd FileType * set noexpandtab
 autocmd FileType c,java,ruby,python,sh set expandtab
 
+" No backups for crontab editing
+autocmd FileType crontab set nobackup nowritebackup
+
 " Syntax highlighting and filetypes
 syntax on
 filetype indent plugin on
