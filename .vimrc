@@ -22,7 +22,7 @@ command -nargs=1 Tab set shiftwidth=<args> tabstop=<args> softtabstop=<args>
 command Copy set nonumber nolist mouse=
 command Nocopy set number list mouse=a
 autocmd FileType * Tab 8
-autocmd FileType c,java,python,php,html,xml,css,scss,sass,javascript,coffee Tab 4
+autocmd FileType c,java,python,php,html,xml,css,scss,sass,javascript,coffee,jinja Tab 4
 autocmd FileType ruby,sh Tab 2
 autocmd FileType * set noexpandtab
 autocmd FileType c,java,ruby,python,sh set expandtab
@@ -34,6 +34,8 @@ autocmd FileType crontab set nobackup nowritebackup
 syntax on
 filetype indent plugin on
 color chris
+
+autocmd BufNewFile,BufRead *.twig set filetype=jinja
 
 " Visual
 set shortmess=It
