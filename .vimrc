@@ -35,6 +35,7 @@ syntax on
 filetype indent plugin on
 color chris
 
+autocmd BufNewFile,BufRead *.json set filetype=javascript
 autocmd BufNewFile,BufRead *.twig set filetype=jinja
 
 " Visual
