@@ -34,8 +34,10 @@ if version >= 700
   hi CursorLine     guifg=NONE        guibg=NONE        gui=BOLD      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
   hi CursorColumn   guifg=NONE        guibg=NONE        gui=BOLD      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
   hi MatchParen     guifg=#ffffff     guibg=#666666     gui=NONE      ctermfg=white       ctermbg=black       cterm=NONE
-  hi Pmenu          guifg=#666666     guibg=#ffffff     gui=NONE      ctermfg=black       ctermbg=white      cterm=NONE
+  hi Pmenu          guifg=#666666     guibg=#ffffff     gui=NONE      ctermfg=black       ctermbg=white       cterm=NONE
   hi PmenuSel       guifg=#666666     guibg=#99cc66     gui=NONE      ctermfg=black       ctermbg=green       cterm=NONE
+  hi PmenuSbar      guifg=#666666     guibg=#666666     gui=NONE      ctermfg=black       ctermbg=black       cterm=NONE
+  hi PmenuThumb     guifg=NONE        guibg=NONE        gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
   hi Search         guifg=#666666     guibg=#cccc66     gui=NONE      ctermfg=black       ctermbg=yellow      cterm=NONE
   hi IncSearch      guifg=#666666     guibg=#cccc66     gui=NONE      ctermfg=black       ctermbg=yellow      cterm=NONE
   hi TabLine                                                          ctermfg=NONE        ctermbg=black       cterm=NONE
