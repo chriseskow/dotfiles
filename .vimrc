@@ -72,3 +72,6 @@ endif
 
 " Shortcut to append semicolons to lines
 nnoremap ;        A;<Esc>
+
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabContextDefaultCompletionType = "<c-n>"
