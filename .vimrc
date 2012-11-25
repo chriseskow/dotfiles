@@ -8,6 +8,7 @@ set directory=~/.vim/swap
 set splitbelow
 set splitright
 set clipboard=unnamed
+let mapleader=","
 call pathogen#infect()
 
 " Control
@@ -54,6 +55,12 @@ set incsearch
 set wrapscan
 set hlsearch
 
+" Random mappings
+cnoremap %% <C-R>=expand('%:h').'/'<CR>
+map <Leader>e :e %%
+map <Leader><Leader> <C-^>
+nnoremap ; A;<Esc>
+
 " Always move into wrapped lines
 nnoremap j        gj
 nnoremap <Down>   gj
@@ -70,8 +77,18 @@ if bufwinnr(1)
   map <kDivide> <C-W><
 endif
 
-" Shortcut to append semicolons to lines
-nnoremap ;        A;<Esc>
+" Move/rename current file
+function! MoveFile()
+  let old_name = expand('%')
+  let new_name = input('New file name: ', expand('%'), 'file')
+  if new_name != '' && new_name != old_name
+    exec ':saveas ' . new_name
+    exec ':silent !rm ' . old_name
+    redraw!
+  endif
+endfunction
+command! MoveFile :call MoveFile()
+map <Leader>m :call MoveFile()<CR>
 
 let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabContextDefaultCompletionType = "<c-n>"
+let g:SuperTabContextDefaultCompletionType = "<C-n>"
