@@ -10,11 +10,24 @@
 	editor = vim
 	pager = less -FRX
 	excludesfile = ~/.gitignore
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[merge]
+	tool = vimdiff
+[mergetool]
+	prompt = false
+	keepBackup = false
 [alias]
 	st = status
+	aa = add --all
 	ci = commit
+	am = commit --amend
 	co = checkout
 	br = branch
 	df = diff
+	dc = diff --cached
 	head = log -n 1
 	tree = log --all --pretty=oneline --abbrev-commit --graph --decorate
+	worddiff = diff --word-diff=color
