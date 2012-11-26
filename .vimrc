@@ -56,25 +56,29 @@ set wrapscan
 set hlsearch
 
 " Random mappings
-cnoremap %% <C-R>=expand('%:h').'/'<CR>
+cnoremap %% <C-r>=expand('%:h').'/'<CR>
 map <Leader>e :e %%
 map <Leader><Leader> <C-^>
+map <C-w><C-h> :vertical resize -10<CR>
+map <C-w><C-j> :resize +5<CR>
+map <C-w><C-k> :resize -5<CR>
+map <C-w><C-l> :vertical resize +10<CR>
 nnoremap ; A;<Esc>
 
 " Always move into wrapped lines
 nnoremap j        gj
 nnoremap <Down>   gj
-inoremap <Down>   <C-O>gj
+inoremap <Down>   <C-o>gj
 nnoremap k        gk
 nnoremap <Up>     gk
-inoremap <Up>     <C-O>gk
+inoremap <Up>     <C-o>gk
 
 " Numpad operator keys resize split windows
 if bufwinnr(1)
-  map <kPlus> <C-W>+
-  map <kMinus> <C-W>-
-  map <kMultiply> <C-W>>
-  map <kDivide> <C-W><
+  map <kPlus> <C-w>+
+  map <kMinus> <C-w>-
+  map <kMultiply> <C-w>>
+  map <kDivide> <C-w><
 endif
 
 " Move/rename current file
