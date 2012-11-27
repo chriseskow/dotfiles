@@ -57,8 +57,11 @@ set hlsearch
 
 " Random mappings
 cnoremap %% <C-r>=expand('%:h').'/'<CR>
-map <Leader>e :e %%
-map <Leader><Leader> <C-^>
+map ,, <C-^>
+map ,e :e %%
+map ,l :set list!<CR>
+map ,s /\s\+$/<CR>
+map ,S :%s/\s\+$//<CR>
 map <C-w><C-h> :vertical resize -10<CR>
 map <C-w><C-j> :resize +5<CR>
 map <C-w><C-k> :resize -5<CR>
@@ -92,7 +95,6 @@ function! MoveFile()
   endif
 endfunction
 command! MoveFile :call MoveFile()
-map <Leader>m :call MoveFile()<CR>
 
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType = "<C-n>"
