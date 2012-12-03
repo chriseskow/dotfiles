@@ -20,8 +20,8 @@ set scrolloff=2
 set autoindent
 set smartindent
 command -nargs=1 Tab set shiftwidth=<args> tabstop=<args> softtabstop=<args>
-command Copy set nonumber nolist mouse=
-command Nocopy set number list mouse=a
+command Copy set nopaste nonumber nolist mouse=
+command Nocopy set paste number mouse=a
 autocmd FileType * Tab 8
 autocmd FileType c,java,python,php,html,xml,css,scss,sass,javascript,coffee,jinja Tab 4
 autocmd FileType ruby,sh Tab 2
@@ -48,7 +48,7 @@ set laststatus=2
 set statusline=%<%f\ %h%m%r%=(%l,%c%V)\ %P\ %y
 set wildmode=longest,list,full
 set wildmenu
-set list listchars=eol:…,tab:›.
+set listchars=eol:…,tab:›.
 
 " Searching
 set incsearch
