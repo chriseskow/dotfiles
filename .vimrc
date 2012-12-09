@@ -56,7 +56,6 @@ set wrapscan
 set hlsearch
 
 " Key mappings
-cnoremap %% <C-r>=expand('%:h').'/'<CR>
 map ,, <C-^>
 map ,e :e %%
 map ,l :set list!<CR>
@@ -70,7 +69,9 @@ map <C-w><C-h> :vertical resize -10<CR>
 map <C-w><C-j> :resize +5<CR>
 map <C-w><C-k> :resize -5<CR>
 map <C-w><C-l> :vertical resize +10<CR>
-nnoremap ; A;<Esc>
+map ; A;<Esc>
+imap <C-l> <Space>=><Space>
+cnoremap %% <C-r>=expand('%:h').'/'<CR>
 
 " Always move into wrapped lines
 nnoremap j        gj
