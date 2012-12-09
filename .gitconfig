@@ -10,6 +10,8 @@
 	editor = vim
 	pager = less -FRX
 	excludesfile = ~/.gitignore
+[pager]
+	log = less -FRSX
 [diff]
 	tool = vimdiff
 [difftool]
@@ -20,14 +22,16 @@
 	prompt = false
 	keepBackup = false
 [alias]
-	st = status
-	aa = add --all
-	ci = commit
-	am = commit --amend
+	s = status
+	a = add --all
+	ci = commit -v
+	amend = commit -v --amend
 	co = checkout
-	br = branch
-	df = diff
+	b = branch --all
+	d = diff
+	ds = diff --stat
 	dc = diff --cached
-	head = log -n 1
-	tree = log --all --pretty=oneline --abbrev-commit --graph --decorate
-	worddiff = diff --word-diff=color
+	dw = diff --word-diff=color
+	l = log --all --date-order --oneline --graph --decorate
+	ll = log --all --date-order --graph --pretty='tformat:%C(yellow)%h %C(green)(%ar) %C(blue)%an%C(red)%d %C(reset)%s'
+	head = log -1
