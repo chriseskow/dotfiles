@@ -2,7 +2,7 @@
 export HISTSIZE=1000000
 export EDITOR=vim
 export PAGER=less
-export LESS=-R
+export LESS=-RS
 
 # PATH
 for DIR in \
