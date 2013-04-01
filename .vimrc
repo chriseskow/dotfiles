@@ -59,6 +59,7 @@ set hlsearch
 map ,, <C-^>
 map ,e :e %%
 map ,l :set list!<CR>
+map ,d /^\(<\\|\|\\|=\\|>\)\{7\}/<CR>
 map ,s /\s\+$/<CR>
 map ,S :%s/\s\+$//<CR>
 map <C-h> <C-w>h
