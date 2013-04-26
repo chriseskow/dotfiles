@@ -1,5 +1,6 @@
 set expand-tilde off
 set match-hidden-files off
+set show-all-if-ambiguous on
 
 # Key bindings
 "\C-b": backward-word
