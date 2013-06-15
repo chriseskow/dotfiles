@@ -1,7 +1,6 @@
 " General
 set nocompatible
 set fileformat=unix
-set mouse=a
 set backup
 set backupdir=~/.vim/backup
 set directory=~/.vim/swap
@@ -15,6 +14,12 @@ call pathogen#infect()
 set backspace=indent,eol,start
 set whichwrap=b,s,h,l,<,>,[,]
 set scrolloff=2
+
+" Mouse support
+set mouse=a
+if &term =~ '^screen'
+  set ttymouse=xterm2
+endif
 
 " Tabs and indenting
 set autoindent
