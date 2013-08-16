@@ -4,22 +4,19 @@ export EDITOR=vim
 export PAGER=less
 export LESS=-R
 
-# PATH
-for DIR in \
-  "/usr/X11/bin" \
-  "/usr/local/sbin" \
-  "/usr/local/bin" \
-  "$HOME/bin" \
-  "$HOME/Code/bin"
-do
-  if [ -d "$DIR" ]; then
-    PATH="$DIR:$PATH"
+# Function for adding directories to PATH
+pathadd() {
+  if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+    PATH="$1${PATH:+":$PATH"}"
   fi
-done
-PATH="$(echo "$PATH" | awk -v RS=: -v ORS=: '!($0 in a) {a[$0]; print}')"
-PATH="${PATH%:}"
-export PATH
-unset DIR
+}
+
+# Path
+pathadd /usr/X11/bin
+pathadd /usr/local/sbin
+pathadd /usr/local/bin
+pathadd "$HOME/bin"
+pathadd "$HOME/Code/bin"
 
 # Prompt
 NONE="\[\033[0m\]"
