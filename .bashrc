@@ -5,10 +5,15 @@ export PAGER=less
 export LESS=-R
 
 # Function for adding directories to PATH
-pathadd() {
+function pathadd() {
   if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
     PATH="$1${PATH:+":$PATH"}"
   fi
+}
+
+# Function for sourcing files only if they exist
+function source_if_exists() {
+  test -f "$1" && source "$1"
 }
 
 # Path
@@ -69,7 +74,7 @@ case `uname` in
     export LSCOLORS=excxfxdxbxafadababaggx
     alias ls="ls -hFG"
     alias grep="grep --color=auto"
-    rmdsstore() {
+    function rmdsstore() {
       find ${1:-.} -name .DS_Store -print -delete
     }
     ;;
@@ -88,16 +93,15 @@ esac
 
 # Run any additional shell scripts
 for FILE in $HOME/.bash.d/*.sh; do
-  if [ -f "$FILE" ]; then
-    source "$FILE"
-  fi
+  source_if_exists "$FILE"
 done
 
 unset FILE
 
 # Bash completion
-if [ -f /etc/bash_completion ]; then
-  source /etc/bash_completion
-elif [ -f /usr/local/etc/bash_completion ]; then
-  source /usr/local/etc/bash_completion
-fi
+source_if_exists /etc/bash_completion
+source_if_exists /usr/local/etc/bash_completion
+source_if_exists /usr/share/git/completion/git-completion.bash
+source_if_exists /usr/share/git/completion/git-prompt.sh
+source_if_exists /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
+source_if_exists /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
