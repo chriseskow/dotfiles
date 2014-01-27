@@ -16,6 +16,17 @@ function source_if_exists() {
   test -f "$1" && source "$1"
 }
 
+# Function to test if a function exists
+function function_exists() {
+  declare -f "$1" > /dev/null
+}
+
+# Bash completion
+source_if_exists /etc/bash_completion
+source_if_exists /usr/local/etc/bash_completion
+source_if_exists /usr/share/git/completion/git-completion.bash
+source_if_exists /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
+
 # Path
 pathadd /usr/X11/bin
 pathadd /usr/local/sbin
@@ -29,7 +40,17 @@ RED="\[\033[31m\]"
 GREEN="\[\033[32m\]"
 YELLOW="\[\033[33m\]"
 BLUE="\[\033[34m\]"
-type -t __git_ps1 | grep -q function || function __git_ps1 { false; }
+
+# Load Git's shell prompt helper function
+if ! function_exists __git_ps1; then
+  source_if_exists /usr/share/git/completion/git-prompt.sh
+  source_if_exists /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
+
+  if ! function_exists __git_ps1; then
+    source "$HOME/.git-prompt.sh"
+  fi
+fi
+
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export PS1="$NONE[$GREEN\u$NONE@$RED\h$NONE:$BLUE\w$NONE\$(__git_ps1 ' ($YELLOW%s$NONE)')]\\$ "
@@ -97,11 +118,3 @@ for FILE in $HOME/.bash.d/*.sh; do
 done
 
 unset FILE
-
-# Bash completion
-source_if_exists /etc/bash_completion
-source_if_exists /usr/local/etc/bash_completion
-source_if_exists /usr/share/git/completion/git-completion.bash
-source_if_exists /usr/share/git/completion/git-prompt.sh
-source_if_exists /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
-source_if_exists /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
