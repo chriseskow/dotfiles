@@ -21,12 +21,6 @@ function function_exists() {
   declare -f "$1" > /dev/null
 }
 
-# Bash completion
-source_if_exists /etc/bash_completion
-source_if_exists /usr/local/etc/bash_completion
-source_if_exists /usr/share/git/completion/git-completion.bash
-source_if_exists /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
-
 # Path
 pathadd /usr/X11/bin
 pathadd /usr/local/sbin
@@ -34,12 +28,13 @@ pathadd /usr/local/bin
 pathadd "$HOME/bin"
 pathadd "$HOME/Code/bin"
 
-# Prompt
-NONE="\[\033[0m\]"
-RED="\[\033[31m\]"
-GREEN="\[\033[32m\]"
-YELLOW="\[\033[33m\]"
-BLUE="\[\033[34m\]"
+# Load bash completion
+if [ -z "$BASH_COMPLETION" ]; then
+  source_if_exists /etc/bash_completion
+  source_if_exists /usr/local/etc/bash_completion
+  source_if_exists /usr/share/git/completion/git-completion.bash
+  source_if_exists /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
+fi
 
 # Load Git's shell prompt helper function
 if ! function_exists __git_ps1; then
@@ -50,6 +45,13 @@ if ! function_exists __git_ps1; then
     source "$HOME/.git-prompt.sh"
   fi
 fi
+
+# Prompt
+NONE="\[\033[0m\]"
+RED="\[\033[31m\]"
+GREEN="\[\033[32m\]"
+YELLOW="\[\033[33m\]"
+BLUE="\[\033[34m\]"
 
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
