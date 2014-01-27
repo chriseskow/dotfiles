@@ -80,8 +80,6 @@ alias mv="mv -i"
 alias la="ls -a"
 alias ll="ls -l"
 alias lal="ls -al"
-alias df="df -h"
-alias du="du -h"
 alias g="git"
 
 if which colordiff &>/dev/null; then
