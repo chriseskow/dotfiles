@@ -88,6 +88,13 @@ if which colordiff &>/dev/null; then
   alias diff="colordiff"
 fi
 
+# Back up files and directories
+bak() {
+  for file in "$@"; do
+    cp -a -- "$file" "$file.bak"
+  done
+}
+
 # OS-specific configuration
 case `uname` in
   Darwin)
