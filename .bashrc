@@ -5,19 +5,19 @@ export PAGER=less
 export LESS=-R
 
 # Function for adding directories to PATH
-function pathadd() {
+pathadd() {
   if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
     PATH="$1${PATH:+":$PATH"}"
   fi
 }
 
 # Function for sourcing files only if they exist
-function source_if_exists() {
+source_if_exists() {
   test -f "$1" && source "$1"
 }
 
 # Function to test if a function exists
-function function_exists() {
+function_exists() {
   declare -f "$1" > /dev/null
 }
 
@@ -95,7 +95,7 @@ case `uname` in
     export LSCOLORS=excxfxdxbxafadababaggx
     alias ls="ls -hFG"
     alias grep="grep --color=auto"
-    function rmdsstore() {
+    rmdsstore() {
       find ${1:-.} -name .DS_Store -print -delete
     }
     ;;
