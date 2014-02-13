@@ -22,6 +22,8 @@
 [mergetool]
 	prompt = false
 	keepBackup = false
+[push]
+	default = simple
 [alias]
 	s = status
 	a = add --all
