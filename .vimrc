@@ -73,7 +73,8 @@ map <C-w><C-k> :resize -5<CR>
 map <C-w><C-l> :vertical resize +10<CR>
 map ; A;<Esc>
 imap <C-l> <Space>=><Space>
-cnoremap %% <C-r>=expand('%:h').'/'<CR>
+cmap %% <C-r>=expand('%:h').'/'<CR>
+cmap w!! w !sudo tee > /dev/null %
 
 " Always move into wrapped lines
 nnoremap j        gj
