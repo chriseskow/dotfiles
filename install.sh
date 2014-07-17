@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ "x$1" = "x-h" -o "x$1" = "x--help" -o $# -gt 1 ]; then
+if [ "$1" = "-h" -o "$1" = "--help" -o $# -gt 1 ]; then
   echo "Usage: $0 [hostname]"
   exit
 fi
@@ -13,10 +13,4 @@ else
   DEST="$HOME"
 fi
 
-for f in $SRC/.*; do
-  f=$(basename $f)
-  if [[ ! $f =~ ^(\.|\.\.|\.git|\.gitmodules)$ ]]; then
-    echo $f
-    rsync -av "$SRC/$f" "$DEST/$f"
-  fi
-done
+rsync -av --exclude=.git --exclude=.gitmodules $SRC/.[a-z]* "$DEST"
