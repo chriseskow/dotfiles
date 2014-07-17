@@ -5,7 +5,7 @@ if [ "x$1" = "x-h" -o "x$1" = "x--help" -o $# -gt 1 ]; then
   exit
 fi
 
-SRC="`dirname $0`/"
+SRC="`dirname $0`"
 
 if [ -n "$1" ]; then
   DEST="$1:~"
@@ -13,4 +13,10 @@ else
   DEST="$HOME"
 fi
 
-rsync -av --exclude=install.sh --exclude=.git --exclude=.gitmodules "$SRC" "$DEST"
+for f in $SRC/.*; do
+  f=$(basename $f)
+  if [[ ! $f =~ ^(\.|\.\.|\.git|\.gitmodules)$ ]]; then
+    echo $f
+    rsync -av "$SRC/$f" "$DEST/$f"
+  fi
+done
