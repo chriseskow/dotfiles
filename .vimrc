@@ -65,8 +65,8 @@ map ,, <C-^>
 map ,e :e %%
 map ,l :set list!<CR>
 map ,d /^\(<\\|\|\\|=\\|>\)\{7\}/<CR>
-map ,s /\s\+$/<CR>
-map ,S :%s/\s\+$//<CR>
+map ,s /[[:space:]]\+$/<CR>
+map ,S :%s/[[:space:]]\+$//<CR>
 map <C-w><C-h> :vertical resize -10<CR>
 map <C-w><C-j> :resize +5<CR>
 map <C-w><C-k> :resize -5<CR>
