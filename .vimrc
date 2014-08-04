@@ -42,7 +42,8 @@ autocmd FileType crontab set nobackup nowritebackup
 " Syntax highlighting and filetypes
 syntax on
 filetype indent plugin on
-color Tomorrow-Night
+color base16-default
+set background=dark
 
 autocmd BufNewFile,BufRead *.json set filetype=javascript
 autocmd BufNewFile,BufRead *.twig set filetype=jinja
