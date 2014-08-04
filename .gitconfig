@@ -9,7 +9,6 @@
 [core]
 	editor = vim
 	pager = less -FRX
-	excludesfile = ~/.gitignore
 [pager]
 	log = less -FRSX
 [diff]
