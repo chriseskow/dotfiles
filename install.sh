@@ -5,6 +5,8 @@ if [ "$1" = "-h" -o "$1" = "--help" -o $# -gt 1 ]; then
   exit
 fi
 
+git submodule update --init --recursive
+
 SRC="`dirname $0`"
 
 if [ -n "$1" ]; then
