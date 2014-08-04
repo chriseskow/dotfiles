@@ -8,6 +8,9 @@ set splitbelow
 set splitright
 set clipboard=unnamed
 let mapleader=","
+
+" Initialize pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
 " Control
