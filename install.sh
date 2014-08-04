@@ -1,18 +1,21 @@
 #!/bin/sh
 
-if [ "$1" = "-h" -o "$1" = "--help" -o $# -gt 1 ]; then
-  echo "Usage: $0 [hostname]"
-  exit
-fi
+cd "$(dirname "${BASH_SOURCE[0]}")"
+DIR=$(pwd)
 
 git submodule update --init --recursive
 
-SRC="`dirname $0`"
+for file in .[a-z]*; do
+  if [ "$file" = '.git' -o "$file" = '.gitmodules' ]; then
+    continue
+  fi
 
-if [ -n "$1" ]; then
-  DEST="$1:~"
-else
-  DEST="$HOME"
-fi
+  src="$DIR/$file"
+  dest="$HOME/$file"
 
-rsync -av --exclude=.git --exclude=.gitmodules $SRC/.[a-z]* "$DEST"
+  if [ -e "$dest" -a ! -L "$dest" ]; then
+    echo "Skipping $dest because it exists and isn't a symlink"
+  else
+    ln -nfs "$src" "$dest"
+  fi
+done
