@@ -119,9 +119,7 @@ case `uname` in
     alias ls="ls -F"
 esac
 
-# Run any additional shell scripts
-for FILE in $HOME/.bash.d/*.sh; do
-  source_if_exists "$FILE"
-done
+# Run local bash configuration
+source_if_exists "$HOME/.bashrc.local"
 
 unset FILE
