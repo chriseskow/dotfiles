@@ -30,7 +30,7 @@ command -nargs=1 Tab set shiftwidth=<args> tabstop=<args> softtabstop=<args>
 command Copy set nopaste nonumber nolist mouse=
 command Nocopy set paste number mouse=a
 autocmd FileType * Tab 8
-autocmd FileType c,java,python,php,html,xml,css,scss,sass,javascript,coffee,twig Tab 4
+autocmd FileType c,java,python,php,html,xml,css,scss,sass,javascript,json,coffee,twig Tab 4
 autocmd FileType ruby,sh Tab 2
 autocmd FileType * set noexpandtab
 autocmd FileType c,java,ruby,python,sh set expandtab
@@ -41,7 +41,6 @@ filetype indent plugin on
 color base16-default
 set background=dark
 
-autocmd BufNewFile,BufRead *.json set filetype=javascript
 autocmd BufNewFile,BufRead */httpd/*.conf set filetype=apache
 autocmd BufNewFile,BufRead */nginx/*.conf set filetype=nginx
 
