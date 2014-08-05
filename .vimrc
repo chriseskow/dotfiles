@@ -1,8 +1,6 @@
 " General
 set nocompatible
 set fileformat=unix
-set backup
-set backupdir=~/.vim/backup
 set directory=~/.vim/swap
 set splitbelow
 set splitright
@@ -36,9 +34,6 @@ autocmd FileType c,java,python,php,html,xml,css,scss,sass,javascript,coffee,twig
 autocmd FileType ruby,sh Tab 2
 autocmd FileType * set noexpandtab
 autocmd FileType c,java,ruby,python,sh set expandtab
-
-" No backups for crontab editing
-autocmd FileType crontab set nobackup nowritebackup
 
 " Syntax highlighting and filetypes
 syntax on
