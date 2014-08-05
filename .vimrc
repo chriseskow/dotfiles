@@ -1,7 +1,7 @@
 " General
 set nocompatible
+set noswapfile
 set fileformat=unix
-set directory=~/.vim/swap
 set splitbelow
 set splitright
 set clipboard=unnamed
