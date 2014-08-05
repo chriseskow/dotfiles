@@ -12,7 +12,7 @@ let mapleader=","
 
 " Initialize pathogen
 runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
+execute pathogen#infect()
 
 " Control
 set backspace=indent,eol,start
