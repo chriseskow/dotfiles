@@ -7,6 +7,7 @@ set directory=~/.vim/swap
 set splitbelow
 set splitright
 set clipboard=unnamed
+set ttimeoutlen=100 " Make Esc work faster
 let mapleader=","
 
 " Initialize pathogen
