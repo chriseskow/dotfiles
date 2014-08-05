@@ -48,6 +48,8 @@ set background=dark
 
 autocmd BufNewFile,BufRead *.json set filetype=javascript
 autocmd BufNewFile,BufRead *.twig set filetype=jinja
+autocmd BufNewFile,BufRead */httpd/*.conf set filetype=apache
+autocmd BufNewFile,BufRead */nginx/*.conf set filetype=nginx
 
 " Visual
 set shortmess=It
