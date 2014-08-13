@@ -1,5 +1,7 @@
 set guioptions-=T
 set guitablabel=%t
+set columns=84
+set lines=24
 set background=light
 
 if has("gui_macvim")
