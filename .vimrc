@@ -5,7 +5,6 @@ set fileformat=unix
 set splitbelow
 set splitright
 set clipboard=unnamed
-set modeline
 set ttimeoutlen=100 " Make Esc work faster
 let mapleader=","
 
