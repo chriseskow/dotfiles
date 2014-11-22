@@ -29,6 +29,7 @@ set smartindent
 autocmd FileType * set noexpandtab softtabstop=0 shiftwidth=8
 autocmd FileType c,cpp,java,python,php,twig,sql,json,html,xml,xsd,dtd,css,scss,sass,javascript,coffee,sh set expandtab softtabstop=4 shiftwidth=4
 autocmd FileType ruby,eruby,yaml set expandtab softtabstop=2 shiftwidth=2
+autocmd FileType gitcommit set mouse=
 
 " Syntax highlighting and filetypes
 syntax on
