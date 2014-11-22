@@ -26,14 +26,9 @@ endif
 " Tabs and indenting
 set autoindent
 set smartindent
-command -nargs=1 Tab set shiftwidth=<args> tabstop=<args> softtabstop=<args>
-command Copy set nopaste nonumber nolist mouse=
-command Nocopy set paste number mouse=a
-autocmd FileType * Tab 8
-autocmd FileType c,java,python,php,html,xml,css,scss,sass,javascript,json,coffee,twig,sql Tab 4
-autocmd FileType ruby,sh Tab 2
-autocmd FileType * set noexpandtab
-autocmd FileType c,java,ruby,python,sh set expandtab
+autocmd FileType * set noexpandtab softtabstop=0 shiftwidth=8
+autocmd FileType c,cpp,java,python,php,twig,sql,json,html,xml,xsd,dtd,css,scss,sass,javascript,coffee,sh set expandtab softtabstop=4 shiftwidth=4
+autocmd FileType ruby,eruby,yaml set expandtab softtabstop=2 shiftwidth=2
 
 " Syntax highlighting and filetypes
 syntax on
