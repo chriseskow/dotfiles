@@ -1,1 +1,2 @@
 --follow
+--ignore-dir=vendor
