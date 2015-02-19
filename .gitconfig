@@ -23,6 +23,8 @@
 	keepBackup = false
 [push]
 	default = simple
+[rerere]
+	enabled = true
 [alias]
 	s = status
 	a = add --all
