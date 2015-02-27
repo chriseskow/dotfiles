@@ -1,3 +1,3 @@
 --follow
 --ignore-dir=vendor
---type-add=twig=.twig
+--type-set=twig=.twig
