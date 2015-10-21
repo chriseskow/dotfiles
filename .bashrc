@@ -39,6 +39,7 @@ fi
 # Load Git's shell prompt helper function
 if ! function_exists __git_ps1; then
   source_if_exists /usr/share/git/completion/git-prompt.sh
+  source_if_exists /usr/share/git-core/contrib/completion/git-prompt.sh
   source_if_exists /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
 
   if ! function_exists __git_ps1; then
