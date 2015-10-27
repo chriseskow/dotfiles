@@ -102,3 +102,6 @@ command! MoveFile :call MoveFile()
 
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType = "<C-n>"
+
+" Don't conceal quote marks in JSON files
+let g:vim_json_syntax_conceal = 0
