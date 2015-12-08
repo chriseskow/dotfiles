@@ -3,7 +3,9 @@
 cd "$(dirname "${BASH_SOURCE[0]}")"
 DIR=$(pwd)
 
-git submodule update --init --recursive
+if which git >/dev/null 2>&1; then
+  git submodule update --init --recursive
+fi
 
 for file in .[a-z]*; do
   if [ "$file" = '.git' -o "$file" = '.gitmodules' ]; then
