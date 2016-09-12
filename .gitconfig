@@ -13,6 +13,7 @@
 	log = less -FRSX
 [diff]
 	tool = vimdiff
+	compactionHeuristic = true
 [difftool]
 	prompt = false
 [merge]
