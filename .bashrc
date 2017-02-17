@@ -101,7 +101,7 @@ case `uname` in
   Darwin)
     export COPYFILE_DISABLE=true
     export LSCOLORS=excxfxdxbxafadababaggx
-    alias ls="ls -hFG"
+    alias ls="ls -hG"
     alias grep="grep --color=auto"
     rmdsstore() {
       find ${1:-.} -name .DS_Store -print -delete
@@ -109,15 +109,10 @@ case `uname` in
     ;;
   Linux)
     export LS_COLORS="di=34:ln=32:so=35:pi=33:ex=31:bd=90;45:cd=90;43:su=90;41:sg=90;41:tw=90;46:ow=36:mi=90;42"
-    alias ls="ls -hF --color=auto"
+    alias ls="ls -h --color=auto"
     alias grep="grep --color=auto"
     alias ff="firefox &"
     ;;
-  SunOS)
-    alias ls="ls -F"
-    ;;
-  *)
-    alias ls="ls -F"
 esac
 
 # Run local bash configuration
