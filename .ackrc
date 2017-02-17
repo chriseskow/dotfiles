@@ -1,4 +1,5 @@
 --follow
+--ignore-dir=docs
 --ignore-dir=vendor
 --ignore-file=is:.php_cs.cache
 --type-set=twig=.twig
