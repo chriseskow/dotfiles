@@ -60,15 +60,12 @@ export PS1="$NONE[$GREEN\u$NONE@$RED\h$NONE:$BLUE\w$NONE\$(declare -f __git_ps1 
 export SUDO_PS1="$PS1"
 unset NONE RED GREEN YELLOW BLUE
 
-# Title
-export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}\007"'
-
 # Check the window size after each command
 shopt -s checkwinsize
 
 # Share history across sessions
 shopt -s histappend
-export PROMPT_COMMAND="$PROMPT_COMMAND; history -a"
+export PROMPT_COMMAND="history -a"
 
 # Aliases
 alias ..="cd .."
