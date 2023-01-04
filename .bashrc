@@ -28,6 +28,7 @@ pathadd /usr/local/sbin
 pathadd /usr/local/bin
 pathadd "$HOME/bin"
 pathadd "$HOME/Code/bin"
+pathadd "$HOME/.local/bin"
 
 # Load bash completion
 if [ -z "$BASH_COMPLETION" ]; then
