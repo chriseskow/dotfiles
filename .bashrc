@@ -97,6 +97,9 @@ bak() {
 # OS-specific configuration
 case `uname` in
   Darwin)
+    # Suppress macOS bash->zsh transition warning
+    export BASH_SILENCE_DEPRECATION_WARNING=1
+
     export COPYFILE_DISABLE=true
     export LSCOLORS=excxfxdxbxafadababaggx
     alias ls="ls -hG"
