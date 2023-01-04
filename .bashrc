@@ -22,6 +22,9 @@ function_exists() {
   declare -f "$1" > /dev/null
 }
 
+# Homebrew
+test -f /opt/homebrew/bin/brew && eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Path
 pathadd /usr/X11/bin
 pathadd /usr/local/sbin
