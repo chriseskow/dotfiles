@@ -4,6 +4,7 @@ export HISTSIZE=1000000
 export EDITOR=vim
 export PAGER=less
 export LESS=-R
+export HOMEBREW_NO_ANALYTICS=1
 
 # Function for adding directories to PATH
 pathadd() {
