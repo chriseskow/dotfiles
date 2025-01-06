@@ -30,6 +30,7 @@ test -f /opt/homebrew/bin/brew && eval "$(/opt/homebrew/bin/brew shellenv)"
 pathadd /usr/X11/bin
 pathadd /usr/local/sbin
 pathadd /usr/local/bin
+pathadd /opt/homebrew/opt/ruby/bin
 pathadd "$HOME/bin"
 pathadd "$HOME/Code/bin"
 pathadd "$HOME/.local/bin"
