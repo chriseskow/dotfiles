@@ -34,7 +34,7 @@ autocmd FileType gitcommit set mouse=
 " Syntax highlighting and filetypes
 syntax on
 filetype indent plugin on
-color Tomorrow-Night
+color Tomorrow-Night-Darker
 set background=dark
 
 autocmd BufNewFile,BufRead */httpd/*.conf set filetype=apache
