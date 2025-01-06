@@ -63,7 +63,7 @@ BLUE="\[\033[34m\]"
 
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
-export PS1="$BLUE\w$NONE\$(declare -f __git_ps1 > /dev/null && __git_ps1 ' [$YELLOW%s$NONE]')\\$ "
+export PS1="$BLUE\w$NONE\$(declare -f __git_ps1 > /dev/null && __git_ps1 ' [$YELLOW%s$NONE]')⟩ "
 export SUDO_PS1="$PS1"
 unset NONE RED GREEN YELLOW BLUE
 
