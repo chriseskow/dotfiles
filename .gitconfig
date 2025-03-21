@@ -40,6 +40,7 @@
 	lr = log --all --date-order --oneline --graph --decorate -25
 	ll = log --all --date-order --graph --pretty='tformat:%C(yellow)%h %C(green)(%ar) %C(blue)%an%C(red)%d %C(reset)%s'
 	head = log -1
+	wip = "!f() { git commit -m \"WIP: ${1:-$(date +\"%Y-%m-%d %H:%M:%S\")}\" ; }; f"
 [credential]
 	helper = cache --timeout 3600
 [include]
