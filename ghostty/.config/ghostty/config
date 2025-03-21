@@ -1,0 +1,33 @@
+# Ghostty config
+
+# macOS icon
+macos-icon = retro
+macos-titlebar-style = tabs
+
+# Default window size
+window-width = 80
+window-height = 25
+
+# Font
+font-family = JetBrains Mono
+font-family = Symbols Nerd Font Mono
+font-size = 15
+
+# Theme
+theme = base16-mountain
+split-divider-color = #222222
+
+# Keybinds
+keybind = cmd+h=goto_split:left
+keybind = cmd+j=goto_split:down
+keybind = cmd+k=goto_split:up
+keybind = cmd+l=goto_split:right
+keybind = shift+cmd+h=new_split:left
+keybind = shift+cmd+j=new_split:down
+keybind = shift+cmd+k=new_split:up
+keybind = shift+cmd+l=new_split:right
+keybind = ctrl+cmd+h=resize_split:left,100
+keybind = ctrl+cmd+j=resize_split:down,100
+keybind = ctrl+cmd+k=resize_split:up,100
+keybind = ctrl+cmd+l=resize_split:right,100
+keybind = cmd+enter=toggle_split_zoom
