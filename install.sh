@@ -3,12 +3,14 @@
 cd "$(dirname "${BASH_SOURCE[0]}")"
 DIR=$(pwd)
 
+# Install git submodules
 if which git >/dev/null 2>&1; then
   git submodule update --init --recursive
 fi
 
+# Old manual symlink installation
 for file in .[a-z]*; do
-  if [ "$file" = '.git' -o "$file" = '.gitmodules' ]; then
+  if [ "$file" = '.git' -o "$file" = '.gitmodules' -o "$file" = '.stowrc' ]; then
     continue
   fi
 
@@ -21,3 +23,6 @@ for file in .[a-z]*; do
     ln -nfs "$src" "$dest"
   fi
 done
+
+# New stow-based installation
+stow */
