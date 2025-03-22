@@ -1,5 +1,5 @@
 --target=~
 --ignore=.DS_Store
 --ignore=.stowrc
---ignore=install.sh
+--ignore=README.md
 --verbose
