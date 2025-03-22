@@ -124,6 +124,7 @@ esac
 
 # App config env vars
 export IRBRC="$HOME/.config/irb/irbrc"
+export ACKRC="$HOME/.config/ack/ackrc"
 
 # Run local bash configuration
 source_if_exists "$HOME/.bashrc.local"
