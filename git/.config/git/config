@@ -44,8 +44,6 @@
 	wip = "!f() { git commit -m \"WIP: ${1:-$(date +\"%Y-%m-%d %H:%M:%S\")}\" ; }; f"
 [credential]
 	helper = cache --timeout 3600
-[include]
-	path = .gitconfig.local
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

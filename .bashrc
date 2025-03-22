@@ -50,7 +50,7 @@ if ! function_exists __git_ps1; then
   source_if_exists /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
 
   if ! function_exists __git_ps1; then
-    source "$HOME/.git-prompt.sh"
+    source "$HOME/.config/git/git-prompt.sh"
   fi
 fi
 
