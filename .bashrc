@@ -122,6 +122,9 @@ case `uname` in
     ;;
 esac
 
+# App config env vars
+export IRBRC="$HOME/.config/irb/irbrc"
+
 # Run local bash configuration
 source_if_exists "$HOME/.bashrc.local"
 
